@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="./img/favo.ico" />
+  <link rel="stylesheet" href="css/index.css" /> 
+  
+  <script type="text/javascript">
+    setInterval(clicked, 1000);
+    function clicked() {
+      openInNewTab();
+	    window.location.replace('https://google.com');	  
+    }
+	  function openInNewTab() {
+        win = window.open();
+        win.document.body.style.margin = "0";
+        win.document.body.style.height = "100vh";
+        let link = win.document.createElement('link');
+        link.rel = 'icon';
+        win.document.getElementsByTagName('head')[0].appendChild(link);
+        var iframe = win.document.createElement("iframe");
+        iframe.style.border = "none";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.margin = "0";
+        iframe.referrerpolicy = "no-referrer";
+        iframe.allow = "fullscreen";
+        //LOOK HERE
+        //INPUT SITE NAME BELOW
+        iframe.src = "https://your-site-url-here"
+        //INPUT SITE NAME ABOVE
+        //LOOK HERE
+        win.document.body.appendChild(iframe);
+	  }
+  </script>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click to Continue</title>
+    <style>
+        body {
+            display: flex; /* Use Flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            background-color: #f0f0f0; /* Light gray background */
+            font-family: Arial, sans-serif; /* Font style */
+            color: #333; /* Text color */
+            text-align: center; /* Center text */
+        }
+        .message {
+            padding: 20px; /* Padding around the message */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #ffffff; /* White background for the message */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.2s; /* Smooth transition for hover effect */
+        }
+        .message:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Click anywhere to continue</h1>
+    </div>
+</body>
+</html>
+
+
+
